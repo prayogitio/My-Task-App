@@ -1,0 +1,31 @@
+<form class="well">
+    <div class="form-group">
+      <div class="input-group col-md-5">
+          <input type="text" [(ngModel)]="title" name="title" class="form-control" placeholder="Add a task (Click the button after finish typing a task)" />
+          <span class="input-group-btn">
+            <button type="submit" name="btnSubmit" (click)="addTask($event)" class="btn btn-danger"><span class="glyphicon glyphicon-chevron-down"></span></button>
+          </span>
+      </div>
+      <hr>
+      <div class="input-group col-md-3">
+          <input type="text" [ngModelOptions]="{standalone:true}" [(ngModel)]="term" class="form-control" name="title" placeholder="Search a task" />
+      </div>
+    </div>
+</form>
+<div class = task-list>
+    <div *ngFor="let task of tasks | filter:term">
+      <div class="col-md-1">
+          <input type="checkbox" [checked]="task.isDone" (click)="updateStatus(task)" />
+      </div>
+      <div class="col-md-5">
+          {{ task.title }}
+      </div>
+      <div class="col-md-3">
+        <small>{{ task._id }}</small>
+      </div>
+      <div class="col-md-3">
+        <input type="button" (click)="deleteTask(task._id)" value="Delete Task" class="btn btn-danger" />
+      </div>
+      <br><br>
+    </div>
+</div>
