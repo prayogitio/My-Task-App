@@ -4,9 +4,9 @@ var path = require('path');
 var todoController = require('./controllers/todoController');
 
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'client/dist'));
+app.set('views', path.join(__dirname, 'views'));
 app.engine('html', require('ejs').renderFile);
-app.use(express.static(path.join(__dirname, 'client/dist')));
+app.use(express.static(path.join(__dirname, 'views')));
 
 todoController(app);
 

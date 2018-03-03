@@ -3,7 +3,7 @@ webpackJsonp(["styles"],{
 /***/ "./node_modules/raw-loader/index.js!./node_modules/postcss-loader/lib/index.js??embedded!./src/styles.css":
 /***/ (function(module, exports) {
 
-module.exports = "/* You can add global styles to this file, and also import other style files */\n"
+module.exports = "/* You can add global styles to this file, and also import other style files */\r\ninput [type=text] {\r\n    width: 130px;\r\n    -webkit-box-sizing: border-box;\r\n            box-sizing: border-box;\r\n    border: 2px solid #ccc;\r\n    border-radius: 4px;\r\n    font-size: 16px;\r\n    background-color: white;\r\n    background-position: 10px 10px; \r\n    background-repeat: no-repeat;\r\n    padding: 12px 20px 12px 40px;\r\n    -webkit-transition: width 1s ease-in-out;\r\n    transition: width 1s ease-in-out;\r\n}\r\ninput[type=text]:focus {\r\n    width: 100%;\r\n}"
 
 /***/ }),
 
