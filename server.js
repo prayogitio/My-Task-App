@@ -10,6 +10,6 @@ app.use(express.static(path.join(__dirname, 'client/dist')));
 
 todoController(app);
 
-app.listen(3000, function() {
-    console.log('running on port 3000..');
+app.listen(process.env.PORT || 8000, function() {
+    console.log('running..');
 });
